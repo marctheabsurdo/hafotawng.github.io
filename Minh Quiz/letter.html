@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Template</title>
+    <link rel="stylesheet" href="./css/letter.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="manifest" href="./assets/app.manifest">
+    <meta name="theme-color" content="#000">
+</head>
+<body>
+<!-- Persistent -->
+<canvas  x-show="" id="gradient-canvas" data-transition-in></canvas>
+<div class="noise-overlay"></div>
+<div class="letterbox">
+    <img     class="letter" 
+src="./assets/images/letter/THU.png"  alt="">
+</div>
+<img 
+class="bubble bubble1" id="bubble1"
+src="./assets/images/letter/H1.png" alt="">
+<img 
+class="bubble bubble2"  id="bubble2"
+src="./assets/images/letter/H2.png" alt="">
+<img
+class="bubble bubble3"  id="bubble3"
+src="./assets/images/letter/H3.png" alt="">
+<img
+class="bubble bubble4"  id="bubble4"
+src="./assets/images/letter/H4.png" alt="">
+
+
+
+</body>
+
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script type="module">
+    import { Gradient } from './js/Gradient.js';
+    // Create your instance
+    const gradient = new Gradient();
+    window.gradient = gradient;
+    // Call `initGradient` with the selector to your canvas
+    gradient.initGradient('#gradient-canvas');
+    gradient.amp = 150;
+  </script>
+   <script src="./js/index2.js"></script>
+</html>
